@@ -7,10 +7,6 @@ import { LuArrowUpToLine } from "react-icons/lu";
 import { FaRegShareFromSquare } from "react-icons/fa6";
 import { PiArrowsSplitBold } from "react-icons/pi";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-interface DoubleGreaterSYmbolProps {
-    className?: string;
-}
-
 
 const Toolbar = () => {
 
