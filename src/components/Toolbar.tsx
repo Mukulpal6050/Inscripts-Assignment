@@ -11,11 +11,7 @@ interface DoubleGreaterSYmbolProps {
     className?: string;
 }
 
-const DoubleGreaterSYmbol = ({ className }: DoubleGreaterSYmbolProps) => {
-    return(
-        <p className={`text-xs ${className ?? ""}`.trim()}>{">>"}</p>
-    )
-}
+
 const Toolbar = () => {
 
     const hideFieldButton = () => {
