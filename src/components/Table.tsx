@@ -1,3 +1,4 @@
+import React from "react";
 import {
   useReactTable,
   getCoreRowModel,
@@ -151,7 +152,7 @@ const Table = () => {
             <table className="w-full table-auto border-collapse text-black">
                 <thead>
                     {table.getHeaderGroups().map(headerGroup => (
-                        <>
+                        <React.Fragment key={headerGroup.id}>
                             <tr>
                                 <th className="border border-gray-300 px-4 py-1 border-b-0" />
                                 {headerGroup.headers.map((header) => (
@@ -261,14 +262,13 @@ const Table = () => {
                                     +
                                 </td>
                             </tr>
-                        </>
+                        </React.Fragment>
                     ))}
                     
                 </thead>
 
                 <tbody>
-                    {table.getRowModel().rows.map((row) => (
-                        <>
+                    {table.getRowModel().rows.map((row) => (  
                             <tr  key={row.id} className="hover:bg-gray-50 text-[8px]">
                                 <td className="border border-gray-300 px-4 py-2">
                                     {Number(row.id) + 1}
@@ -281,7 +281,6 @@ const Table = () => {
                                 ))}
                                 <td className="border border-gray-300 px-4 py-2 min-w-24"></td>
                             </tr>
-                        </>
                     ))}
                 </tbody>
             </table>
